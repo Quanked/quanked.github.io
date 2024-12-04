@@ -1,0 +1,43 @@
+:root {
+  --purple: rgb(107, 56, 107);
+  --black: rgb(0, 0, 0);
+  --white: rgb(255, 255, 255);
+}
+
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: var(--black);
+  overflow: hidden;
+}
+.navbar li {
+  float: right;
+}
+.navbar li a {
+  display: block;
+  color: var(--white);
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 16px;
+}
+.navbar li a:hover {
+  background-color: var(--purple);
+}
+
+.Img-MaxRego {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+.content-continer {
+  padding: 100px;
+}
+
+@media (max-width: 720px) {
+  .navbar li {
+    width: 25%;
+  }
+}

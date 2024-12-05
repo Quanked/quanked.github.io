@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Idea - Contact</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/website.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="navbar">
+          <li><a href="contact.html">Contacts</a></li>
+          <li><a href="prevWork.html">Previous Work</a></li>
+          <li><a href="currProject.html">Projects</a></li>
+          <li><a href="index.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div id="contact" class="content-container">
+        <h1>Get in Contact with Me!</h1>
+        <form id="contactForm" class="contact-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" required />
+          <label for="content">Email Contents</label>
+          <textarea
+            type="text"
+            id="content"
+            name="content"
+            class="form-textbox"
+            required
+          ></textarea>
+          <button type="submit" class="submit-button">Send Email!</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

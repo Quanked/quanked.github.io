@@ -83,6 +83,50 @@ header {
   background-color: var(--purple);
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+.grid-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: var(--white);
+  border: 1px solid var(--lightGray);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 1%;
+}
+
+.grid-item h3 {
+  text-align: center;
+  margin: 0;
+}
+.grid-item .project-link {
+  color: var(--white);
+  display: block;
+  margin: 10px;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: var(--black);
+  padding: 10px 20px;
+  text-align: center;
+}
+.grid-item .project-link:hover {
+  background-color: var(--purple);
+}
+.grid-item p {
+  text-align: left;
+  margin: 10px;
+}
+
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    width: 100%;
+    padding: 0 10px;
+  }
+}
 @media (max-width: 720px) {
   .navbar li {
     width: 25%;

@@ -9,6 +9,14 @@ body {
   background-color: var(--lightGray);
 }
 
+* {
+  font-family: sans-serif;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+  font-family: serif;
+}
+
 header {
   position: sticky;
   top: 0;
@@ -34,6 +42,14 @@ header {
 }
 .navbar li a:hover {
   background-color: var(--purple);
+}
+
+.bio-container {
+  display: flex;
+  flex-direction: row;
+}
+.bio-container .content-container {
+  max-width: 50%;
 }
 
 .Img-MaxRego {
@@ -148,5 +164,11 @@ header {
 @media (max-width: 720px) {
   .navbar li {
     width: 25%;
+  }
+  .bio-container {
+    display: block;
+  }
+  .bio-container .content-container {
+    max-width: 100%;
   }
 }

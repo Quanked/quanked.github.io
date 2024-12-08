@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         //Repo and Link on the left
         const leftColumn = document.createElement("div");
         leftColumn.innerHTML = `
-        <h3>${repo.name}</h3> 
+        <h2>${repo.name}</h2> 
         <a href="${repo.html_url}" target="_blank" class="project-link">View Repo</a>
         `;
 

@@ -3,27 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Website Idea - Current Project</title>
+    <title>Website Idea - Projects</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <script defer src="js/currWork.js"></script>
+    <script defer src="js/projects.js"></script>
   </head>
   <body>
     <header>
       <nav>
         <ul class="navbar">
           <li><a href="contact.html">Contacts</a></li>
+          <li><a href="projects.html">Projects</a></li>
           <li><a href="prevWork.html">Previous Work</a></li>
-          <li><a href="currProject.html">Projects</a></li>
           <li><a href="index.html">Home</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <div id="CurrProject" class="content-container">
-        <h1>Current Project</h1>
-        <h2>This is what I'm currently working on!</h2>
-        <div id="project-details" class="project-details">
-          <!--Injecting Data Here-->
+      <div id="PrevWork" class="content-container">
+        <h1>Projects</h1>
+        <p>
+          Here's what I've worked on! Ordered based on my last commit. Only
+          public repos shown.
+        </p>
+        <div class="grid-container" id="grid-container">
+          <!-- I inject elements here from the github api of my account-->
         </div>
       </div>
     </main>

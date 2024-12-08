@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
         rightColumn.innerHTML = ` <p>${
           repo.description
             ? repo.description
-            : "Whoops! Max left a missing description here!"
+            : "Whoops! Max left a missing description on GitHub here!"
         }</p> `;
 
         //appending all to the item, then item to container

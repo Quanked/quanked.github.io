@@ -134,7 +134,7 @@ header {
   text-align: left;
   margin: 10px;
 }
-
+/*
 .project-details {
   text-align: center;
   border: 1px solid var(--lightGray);
@@ -153,7 +153,7 @@ header {
 .project-link:hover {
   background-color: var(--purple);
 }
-
+*/
 @media (max-width: 900px) {
   .grid-container {
     grid-template-columns: 1fr;

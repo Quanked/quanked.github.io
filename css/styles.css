@@ -97,7 +97,6 @@ header {
   margin: 10px;
   border-radius: 1%;
 }
-
 .grid-item h3 {
   text-align: center;
   margin: 0;
@@ -118,6 +117,25 @@ header {
 .grid-item p {
   text-align: left;
   margin: 10px;
+}
+
+.project-details {
+  text-align: center;
+  border: 1px solid var(--lightGray);
+  border-radius: 1%;
+}
+.project-link {
+  color: var(--white);
+  text-decoration: none;
+  background-color: var(--black);
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 5px;
+  width: 50%;
+  display: inline-block;
+}
+.project-link:hover {
+  background-color: var(--purple);
 }
 
 @media (max-width: 900px) {

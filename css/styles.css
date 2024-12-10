@@ -113,19 +113,20 @@ header {
   margin: 10px;
   border-radius: 1%;
 }
-.grid-item h3 {
+.grid-item h2 {
   text-align: center;
   margin: 0;
 }
 .grid-item .project-link {
   color: var(--white);
   display: block;
-  margin: 10px;
+  margin: 10px auto;
   font-size: 14px;
   text-decoration: none;
   background-color: var(--black);
   padding: 10px 20px;
   text-align: center;
+  width: 100px;
 }
 .grid-item .project-link:hover {
   background-color: var(--purple);

@@ -10,7 +10,7 @@
     <header>
       <nav>
         <ul class="navbar">
-          <li><a href="contact.html">Contacts</a></li>
+          <li><a href="contact.html">Contact</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="prevWork.html">Resume</a></li>
           <li><a href="index.html">Home</a></li>
@@ -20,7 +20,27 @@
     <main>
       <div id="contact" class="content-container">
         <h1>Get in Contact with Me!</h1>
-        <form id="contactForm" class="contact-form">
+        <div class="link-container">
+          <a href="https://www.linkedin.com/in/max-rego/" target="_blank">
+            Connect with me on LinkedIn!</a
+          >
+          <br />
+          <a href="https://github.com/Quanked" target="_blank"
+            >View my Github!</a
+          >
+        </div>
+        <form
+          id="contactForm"
+          class="contact-form"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          novalidate
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="5fb5c17d-91b2-4c36-b803-fcd1c44f59ce"
+          />
           <div class="form-small">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required />
@@ -34,8 +54,7 @@
             class="form-textbox"
             required
           ></textarea>
-          <button type="submit" class="submit-button">Send Email!</button>
-          <p>Note: Currently non-functioning.</p>
+          <button type="submit" class="submit-button">Send Message!</button>
         </form>
       </div>
     </main>

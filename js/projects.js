@@ -4,36 +4,30 @@ document.addEventListener("DOMContentLoaded", () => {
   const gridContainer = document.getElementById("grid-container");
 
   //collect my github data off of the site.
-  fetch("https://api.github.com/users/quanked/repos")
-    .then((response) => response.json())
-    .then((data) => {
-      //Sort by last pushed
-      data.sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at));
+  fetch("https://api.github.com/users/quanked/events/public")
+    .then((res) => res.json())
+    .then((events) => {
+      events.forEach((event) => {
+        if (event.type === "PushEvent" || event.type === "PullRequestEvent") {
+          const repo = event.repo;
+          if (!contributedRepos.has(repo.name)) {
+            contributedRepos.set(repo.name, repo.url);
+          }
+        }
+      });
 
-      data.forEach((repo) => {
-        //creating base item holder
+      //convert to array and display that
+      contributedRepos.forEach((url, name) => {
         const gridItem = document.createElement("div");
         gridItem.classList.add("grid-item");
 
-        //Repo and Link on the left
-        const leftColumn = document.createElement("div");
-        leftColumn.innerHTML = `
-        <h2>${repo.name}</h2> 
-        <a href="${repo.html_url}" target="_blank" class="project-link">View Repo</a>
+        gridItem.innerHTML = `
+          <h2>${name}</h2>
+          <a href="https://github.com/${name}" target="_blank">View Repo</a>
+          <p>Contributed via ${url.includes("pulls") ? "PR" : "Push"}</p>
         `;
 
-        //description on the Right
-        const rightColumn = document.createElement("div");
-        rightColumn.innerHTML = ` <p>${
-          repo.description
-            ? repo.description
-            : "Whoops! Max left a missing description on GitHub here!"
-        }</p> `;
-
-        //appending all to the item, then item to container
-        gridItem.appendChild(leftColumn);
-        gridItem.appendChild(rightColumn);
-        gridContainer.appendChild(gridItem);
+        document.getElementById("grid-container").appendChild(gridItem);
       });
     })
     .catch((error) => {
